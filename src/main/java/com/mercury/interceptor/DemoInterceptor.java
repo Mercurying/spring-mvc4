@@ -16,7 +16,7 @@ public class DemoInterceptor extends HandlerInterceptorAdapter {
 
     private static final Logger logger = LoggerFactory.getLogger(DemoInterceptor.class);
 
-    // 方法执行前
+    // 方法执行前 如果返回的结果是false 则请求到此就结束停止了
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         long startTime = System.currentTimeMillis();
